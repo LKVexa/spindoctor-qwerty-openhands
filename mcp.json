@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "spindoctor-qwerty": {
+      "type": "stdio",
+      "command": "python",
+      "args": [
+        "-B",
+        "${PLUGIN_ROOT}/engine/scripts/spindoctor_mcp.py"
+      ],
+      "env": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONUTF8": "1"
+      },
+      "cwd": "${PLUGIN_DATA}"
+    }
+  }
+}
